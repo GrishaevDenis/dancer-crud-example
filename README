@@ -1,0 +1,25 @@
+
+REST API для справочника телефонов (для тестового задания)
+
+
+Start: #plackup -R ./lib -p 5000 bin/app.psgi
+
+Просмотр всех записей
+curl http://localhost:5000/
+
+Просмотр одной записи
+curl http://localhost:5000/view/1
+
+Добавление в адресную книгу
+curl "http://localhost:5000/add?lastname=Grishaev&firstname=Denis&phone=%2B1111111111"
+
+Изменение записи
+curl "http://localhost:5000/update/21?lastname=Grishaev&firstname=Denis&phone=%2B11111222"
+
+Удаление из адресной книги
+curl http://localhost:5000/remove/21
+curl http://localhost:5000/remove?id=21
+
+
+
+
